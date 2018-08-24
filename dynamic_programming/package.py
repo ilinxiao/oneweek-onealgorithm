@@ -2,8 +2,6 @@
 动态规划学习一
 背包问题
 """
-import numpy
-
 class DPPackage():
     
     def __init__(self, goods, capacity):
