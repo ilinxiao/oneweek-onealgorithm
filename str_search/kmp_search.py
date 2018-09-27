@@ -44,13 +44,7 @@ def get_next(P):
             j = next[j]
     return next
     
-P = 'LINXILO'
-# P = "ABCDABCE"
-# P = 'ABCDABDE'
-next = get_next(P)
-print(next)
-
-def kmp_search(S,P,start):
+def kmp_search(S,P,start=0):
     """
         KMP模式匹配
         使用KMP算法实现在文本串S当中,从start位置开始搜索P第一次出现的位置。未找到返回-1。
@@ -75,9 +69,15 @@ def kmp_search(S,P,start):
     if j - plen == 0:
         return i - j
     return -1
-    
-    
-# S = "I'M LINXIAO,NOT LINXILO"
-S = "NOT LINXILO"
-print(kmp_search(S,P,5))
-print(kmp_search(S,P,0))
+
+if __name__ == '__main__':
+    P = 'LINXILO'
+    # P = "ABCDABCE"
+    # P = 'ABCDABDE'
+    next = get_next(P)
+    print(next)
+        
+    # S = "I'M LINXIAO,NOT LINXILO"
+    S = "NOT LINXILO"
+    print(kmp_search(S,P,5))
+    print(kmp_search(S,P,0))
